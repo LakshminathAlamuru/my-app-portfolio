@@ -1,0 +1,24 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background-color: #0d0d0d;
+}
+
+/* Apply neutralization only to specific tags to avoid affecting components like the profile image */
+nav, header {
+  border: none !important;
+  box-shadow: none !important;
+  outline: none !important;
+}
+
+/* Prevent global override of all borders — remove or limit this */
+*:not(.glow-border):not(.keep-border), ::before, ::after {
+  border-color: transparent !important;
+}
